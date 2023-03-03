@@ -1,12 +1,14 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import "../contracts/interfaces/IDiamondCut.sol";
-import "../contracts/facets/DiamondCutFacet.sol";
-import "../contracts/facets/DiamondLoupeFacet.sol";
-import "../contracts/facets/OwnershipFacet.sol";
+import "../contracts/main/std/diamond-cut-module/controllers/IDiamondCut.controlller.sol";
+import "../contracts/main/std/diamond-cut-module/DiamondCutFacet.sol";
+import "../contracts/main/std/diamond-loupe-module/DiamondLoupeFacet.sol";
+import "../contracts/main/std/ownership-module/OwnershipFacet.sol";
 import "../../lib/forge-std/src/Test.sol";
-import "../contracts/Diamond.sol";
+import "../contracts/main/Main.sol";
+
+
 
 contract DiamondDeployer is Test, IDiamondCut {
     //contract types of facets to be deployed
